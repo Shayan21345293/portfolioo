@@ -3,10 +3,20 @@
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, Star } from 'lucide-react';
 import { portfolioData } from '@/data/portfolio';
-import Image from 'next/image';
+
+// Define project type properly instead of using "any"
+type Project = {
+  id: string;
+  title: string;
+  description: string;
+  techStack: string[];
+  featured?: boolean;
+  liveUrl?: string;
+  githubUrl?: string;
+};
 
 const ProjectsSection = () => {
-  const ProjectCard = ({ project, index }: { project: any; index: number }) => (
+  const ProjectCard = ({ project, index }: { project: Project; index: number }) => (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -22,17 +32,17 @@ const ProjectsSection = () => {
         </div>
       )}
 
-      {/* Project Image */}
+      {/* Project Image/Emoji */}
       <div className="relative h-64 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 overflow-hidden">
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-6xl opacity-20">
             {project.id === 'shipping-management' ? '🚢' :
-             project.id === 'ecommerce-platform' ? '🛒' :
-             project.id === 'ai-chatbot' ? '🤖' : '📋'}
+              project.id === 'ecommerce-platform' ? '🛒' :
+                project.id === 'ai-chatbot' ? '🤖' : '📋'}
           </div>
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent"></div>
-        
+
         {/* Hover Overlay */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -79,7 +89,7 @@ const ProjectsSection = () => {
 
         {/* Tech Stack */}
         <div className="flex flex-wrap gap-2">
-          {project.techStack.map((tech: string) => (
+          {project.techStack.map((tech) => (
             <span
               key={tech}
               className="px-3 py-1 bg-purple-500/10 text-purple-400 rounded-full text-sm font-medium border border-purple-500/20"
@@ -122,7 +132,7 @@ const ProjectsSection = () => {
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            A showcase of my recent work and the technologies I've mastered
+            A showcase of my recent work and the technologies I&apos;ve mastered
           </p>
         </motion.div>
 
@@ -146,7 +156,7 @@ const ProjectsSection = () => {
               Want to see more?
             </h3>
             <p className="text-gray-300 max-w-md">
-              These are just a few highlights. I'm always working on new projects and exploring innovative solutions.
+              These are just a few highlights. I&apos;m always working on new projects and exploring innovative solutions.
             </p>
             <motion.a
               href="https://github.com/shayan"

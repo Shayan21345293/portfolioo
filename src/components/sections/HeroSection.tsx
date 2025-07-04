@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { ArrowDown, Download, MessageCircle } from 'lucide-react';
+import { ArrowDown, MessageCircle } from 'lucide-react'; // Removed Download
 import { portfolioData } from '@/data/portfolio';
 import SocialLinks from '@/components/ui/SocialLinks';
 
@@ -36,7 +36,7 @@ const HeroSection = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1, delay: 0.2 }}
             >
-              Hey, I'm{' '}
+              Hey, I&apos;m{' '}
               <span className="gradient-text">Shayan</span>
               <motion.span
                 animate={{ rotate: [0, 14, -8, 14, -4, 10, 0] }}
@@ -46,7 +46,7 @@ const HeroSection = () => {
                 🚀
               </motion.span>
             </motion.h1>
-            
+
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

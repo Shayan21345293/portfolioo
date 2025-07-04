@@ -27,13 +27,13 @@ const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitStatus('success');
       setFormData({ name: '', email: '', subject: '', message: '' });
-      
+
       // Reset status after 3 seconds
       setTimeout(() => setSubmitStatus('idle'), 3000);
     }, 1000);
@@ -75,7 +75,7 @@ const ContactSection = () => {
             Get In <span className="gradient-text">Touch</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Have a project in mind or want to collaborate? I'd love to hear from you!
+            Have a project in mind or want to collaborate? I&apos;d love to hear from you!
           </p>
         </motion.div>
 
@@ -90,10 +90,10 @@ const ContactSection = () => {
           >
             <div>
               <h3 className="text-2xl font-semibold text-white mb-6">
-                Let's start a conversation
+                Let&apos;s start a conversation
               </h3>
               <p className="text-gray-300 leading-relaxed mb-8">
-                I'm always open to discussing new opportunities, interesting projects, 
+                I&apos;m always open to discussing new opportunities, interesting projects, 
                 or just having a chat about technology and development. Feel free to reach out!
               </p>
             </div>
@@ -198,7 +198,7 @@ const ContactSection = () => {
                   onChange={handleInputChange}
                   required
                   className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 text-white placeholder-gray-400"
-                  placeholder="What's this about?"
+                  placeholder="What&apos;s this about?"
                 />
               </div>
 

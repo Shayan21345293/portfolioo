@@ -3,14 +3,22 @@
 import { motion } from 'framer-motion';
 import { portfolioData } from '@/data/portfolio';
 
+// ✅ Define the Skill type
+type Skill = {
+  name: string;
+  icon: string;
+  level: number;
+  category: string;
+};
+
 const SkillsSection = () => {
   const skillCategories = {
-    languages: portfolioData.skills.filter(skill => skill.category === 'languages'),
-    frontend: portfolioData.skills.filter(skill => skill.category === 'frontend'),
-    backend: portfolioData.skills.filter(skill => skill.category === 'backend'),
-    database: portfolioData.skills.filter(skill => skill.category === 'database'),
-    ai: portfolioData.skills.filter(skill => skill.category === 'ai'),
-    tools: portfolioData.skills.filter(skill => skill.category === 'tools'),
+    languages: portfolioData.skills.filter((skill: Skill) => skill.category === 'languages'),
+    frontend: portfolioData.skills.filter((skill: Skill) => skill.category === 'frontend'),
+    backend: portfolioData.skills.filter((skill: Skill) => skill.category === 'backend'),
+    database: portfolioData.skills.filter((skill: Skill) => skill.category === 'database'),
+    ai: portfolioData.skills.filter((skill: Skill) => skill.category === 'ai'),
+    tools: portfolioData.skills.filter((skill: Skill) => skill.category === 'tools'),
   };
 
   const categoryTitles = {
@@ -22,7 +30,8 @@ const SkillsSection = () => {
     tools: 'Tools & Others',
   };
 
-  const SkillCard = ({ skill, index }: { skill: any; index: number }) => (
+  // ✅ Use the Skill type instead of any
+  const SkillCard = ({ skill, index }: { skill: Skill; index: number }) => (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -40,7 +49,7 @@ const SkillsSection = () => {
         </div>
         <span className="text-sm text-gray-400 font-medium">{skill.level}%</span>
       </div>
-      
+
       {/* Progress Bar */}
       <div className="w-full bg-gray-700/50 rounded-full h-2 overflow-hidden">
         <motion.div
@@ -54,7 +63,8 @@ const SkillsSection = () => {
     </motion.div>
   );
 
-  const CategorySection = ({ category, skills, index }: { category: string; skills: any[]; index: number }) => (
+  // ✅ Use Skill[] instead of any[]
+  const CategorySection = ({ category, skills, index }: { category: string; skills: Skill[]; index: number }) => (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -105,8 +115,8 @@ const SkillsSection = () => {
             Full Stack Development
           </h3>
           <p className="text-gray-300 max-w-3xl mx-auto leading-relaxed">
-            I specialize in building end-to-end web applications using modern technologies. 
-            From crafting responsive user interfaces to designing robust backend systems, 
+            I specialize in building end-to-end web applications using modern technologies.
+            From crafting responsive user interfaces to designing robust backend systems,
             I enjoy working across the entire development stack.
           </p>
         </motion.div>
