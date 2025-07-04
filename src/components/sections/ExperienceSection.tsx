@@ -22,7 +22,7 @@ const ExperienceSection = () => {
             Work <span className="gradient-text">Experience</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            My professional journey and the impact I've made
+            My professional journey and the impact I&apos;ve made
           </p>
         </motion.div>
 
@@ -56,7 +56,7 @@ const ExperienceSection = () => {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-2 text-gray-400">
                   <Calendar className="w-4 h-4" />
                   <span className="font-medium">{experience.duration}</span>
@@ -151,11 +151,11 @@ const ExperienceSection = () => {
             </h3>
             <p className="text-gray-300 leading-relaxed">
               Working at Infinity Shipping Service has been an incredible learning experience. 
-              I've had the opportunity to work on real-world projects that impact thousands of users, 
+              I&apos;ve had the opportunity to work on real-world projects that impact thousands of users, 
               collaborate with experienced developers, and continuously expand my technical skills.
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center flex-wrap">
               <div className="flex items-center space-x-2 bg-gray-800/50 backdrop-blur-sm rounded-full px-6 py-3 border border-gray-700">
                 <span className="text-purple-400 font-semibold">Current Focus:</span>
                 <span className="text-gray-300">Scaling web applications</span>
@@ -164,13 +164,13 @@ const ExperienceSection = () => {
                 <span className="text-cyan-400 font-semibold">Learning:</span>
                 <span className="text-gray-300">Cloud technologies</span>
               </div>
-              </div>
-              <div className="space-x-2 bg-gray-800/50 backdrop-blur-sm rounded-full px-6 py-3 border border-gray-700">
+              <div className="flex items-center space-x-2 bg-gray-800/50 backdrop-blur-sm rounded-full px-6 py-3 border border-gray-700">
                 <span className="text-cyan-400 font-semibold">Learning:</span>
                 <span className="text-gray-300">AI & Agentic AI</span>
               </div>
             </div>
-                </motion.div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

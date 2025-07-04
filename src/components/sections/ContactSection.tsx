@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, Mail, MapPin, Phone, MessageCircle } from 'lucide-react';
+import { Send, Mail, MapPin, MessageCircle } from 'lucide-react'; // ✅ Removed Phone
 import { portfolioData } from '@/data/portfolio';
 import SocialLinks from '@/components/ui/SocialLinks';
 
@@ -137,9 +137,7 @@ const ContactSection = () => {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <h4 className="text-lg font-semibold text-white">
-                Connect with me
-              </h4>
+              <h4 className="text-lg font-semibold text-white">Connect with me</h4>
               <SocialLinks />
             </motion.div>
           </motion.div>
@@ -198,7 +196,7 @@ const ContactSection = () => {
                   onChange={handleInputChange}
                   required
                   className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-300 text-white placeholder-gray-400"
-                  placeholder="What&apos;s this about?"
+                  placeholder="What's this about?"
                 />
               </div>
 
