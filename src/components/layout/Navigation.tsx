@@ -93,7 +93,7 @@ const Navigation = () => {
             <motion.button
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsOpen(!isOpen)}
-              className="text-foreground hover:text-primary transition-colors mr-5"
+              className="text-foreground hover:text-primary transition-colors mr-8"
               aria-label={isOpen ? "Close menu" : "Open menu"}
               aria-expanded={isOpen}
             >
