@@ -159,7 +159,7 @@ const ProjectsSection = () => {
               These are just a few highlights. I&apos;m always working on new projects and exploring innovative solutions.
             </p>
             <motion.a
-              href="https://github.com/shayan"
+              href="https://github.com/Shayan21345293"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
